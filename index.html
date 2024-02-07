@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/media.css">
+    <title>Mohamed Elhoshary</title>
+</head>
+
+<body>
+    <nav class="navbar pt-0 fixed-top">
+        <header>
+            <div class="text-center">
+                <a href="#WHO" id="nav-who">WHO</a>
+                <a href="#TIME-LINE" id="nav-timeline">TIME LINE</a>
+                <a href="#CERTIFICATIONS" id="nav-certifications">CERTIFICATIONS</a>
+                <button class="btn btn-info" id="language-toggle">English</button>
+            </div>
+        </header>
+    </nav>
+
+    <div class="container ">
+
+        <section class="main">
+            <h1 id="main-heading">MOHAMED ELHOSHARY</h1>
+            <h2>FOOTBALL COACH CAREER</h2>
+            <hr class="line mx-auto">
+        </section>
+
+        <div class="flex">
+            <div class="word">
+                <h2 class="title" id="WHO">WHO?</h2>
+                <p id="who-content">
+                    It is a long established fact that a reader will be distracted by the
+                    readable content of a page when looking at its layout. The point of
+                    using Lorem Ipsum is that it has a more-or-less normal distribution
+                </p>
+            </div>
+            <div class="img">
+                <img src="./Mask%20group.png" alt="">
+            </div>
+        </div>
+
+        <hr class="mx-auto">
+
+        <div class="time-line" id="TIME-LINE">
+            <h2 class="title" id="timeline-heading">TIME LINE</h2>
+            <div class="content">
+                <div class="text">
+                    <div class="left">1982</div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusamus sed possimus odit ipsa est cum aliquam reiciendis,
+                        ut commodi eos voluptatibus eius repellat excepturi culpa natus
+                        architecto assumenda laboriosam incidunt
+                    </p>
+                </div>
+                <div class="text">
+                    <div class="left2">1984-1988</div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusamus sed possimus odit ipsa est cum aliquam reiciendis,
+                        ut commodi eos voluptatibus eius repellat excepturi culpa natus
+                        architecto assumenda laboriosam incidunt
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <hr class="line mx-auto">
+
+        <div class="certifications" id="CERTIFICATIONS">
+            <h2 class="title" id="certifications-heading">CERTIFICATIONS</h2>
+
+            <div class="d-flex names justify-content-around">
+                <p>B DIPLOMA LEVEL</p>
+                <p>2018-2019</p>
+            </div>
+            <img src="./certi.png" alt="Certification">
+            <div class="d-flex names justify-content-around">
+                <p>B DIPLOMA LEVEL</p>
+                <p>2018-2019</p>
+            </div>
+            <img src="./certi.png" alt="Certification">
+            <div class="d-flex names justify-content-around">
+                <p>B DIPLOMA LEVEL</p>
+                <p>2018-2019</p>
+            </div>
+            <img src="./certi.png" alt="Certification">
+            <div class="d-flex names justify-content-around">
+                <p>B DIPLOMA LEVEL</p>
+                <p>2018-2019</p>
+            </div>
+            <img src="./certi.png" alt="Certification">
+            <div class="d-flex names justify-content-around">
+                <p>B DIPLOMA LEVEL</p>
+                <p>2018-2019</p>
+            </div>
+            <img src="./certi.png" alt="Certification">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p class="footer-title" id="footer-title">Copyrights For Mohamed Elhoshary</p>
+    </footer>
+
+    <script>
+        // Define language texts
+        const languageTexts = {
+            'en': {
+                'nav-who': 'WHO',
+                'nav-timeline': 'TIME LINE',
+                'nav-certifications': 'CERTIFICATIONS',
+                'main-heading': 'MOHAMED ELHOSHARY',
+                'WHO': 'WHO?',
+                'who-content': 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution',
+                'timeline-heading': 'TIME LINE',
+                'certifications-heading': 'CERTIFICATIONS',
+                'footer-title': 'Copyrights For Mohamed Elhoshary',
+                'language-toggle': 'English',
+
+            },
+            'ar': {
+                'nav-who': 'من نحن',
+                'nav-timeline': 'الجدول الزمني',
+                'nav-certifications': 'الشهادات',
+                'main-heading': 'محمد الحصري',
+                'WHO': 'من نحن؟',
+                'who-content': 'منذ فترة طويلة من الحقائق مؤكدة أن القارئ سيشتت انتباهه بالمحتوى القابل للقراءة للصفحة عند النظر في تخطيطها. النقطة في استخدام لوريم إيبسوم هي أنه يحتوي على توزيع عادي إلى حد ما',
+                'timeline-heading': 'الجدول الزمني',
+                'certifications-heading': 'الشهادات',
+                'footer-title': 'حقوق الطبع محفوظة لمحمد الحصري',
+                'language-toggle': 'اللغة العربية',
+
+            }
+        };
+
+        // Function to set language
+        function setLanguage( lang )
+        {
+            const texts = languageTexts[ lang ];
+            Object.keys( texts ).forEach( key =>
+            {
+                const element = document.getElementById( key );
+                if ( element )
+                {
+                    element.innerText = texts[ key ];
+                }
+            } );
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        }
+
+        // Initialize with English
+        setLanguage( 'en' );
+
+        // Toggle language on button click
+        const languageToggle = document.getElementById( 'language-toggle' );
+        languageToggle.addEventListener( 'click', function ()
+        {
+            const currentLang = languageToggle.dataset.lang;
+            const newLang = currentLang === 'en' ? 'ar' : 'en';
+            setLanguage( newLang );
+            languageToggle.dataset.lang = newLang;
+        } );
+    </script>
+</body>
+
+</html>
