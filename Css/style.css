@@ -147,7 +147,7 @@ header a:hover {
 .content::before {
   content: "START";
   position: absolute;
-  top: -5%;
+  top: -4%;
   left: -7%;
   font-size: 25px;
   font-weight: 200;
@@ -170,7 +170,7 @@ header a:hover {
   text-align: center !important;
   /* padding-block: 5%; */
   position: relative;
-  white-space: pre;
+  /* white-space: pre; */
 }
 .content .text .left {
   position: absolute;
